@@ -11,6 +11,6 @@ public class Block {
     }
 
     public boolean includes(Coordinate coordinate) {
-        return true;
+        return this.coordinates.contains(coordinate);
     }
 }

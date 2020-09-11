@@ -9,7 +9,8 @@ public class AstarTest {
             new Block(Arrays.asList(new Coordinate[] {
                 new Coordinate(1, 3),
                 new Coordinate(2, 3),
-                new Coordinate(3, 3)
+                new Coordinate(3, 3),
+                new Coordinate(4, 3)
             }))
         });
         Graph graph = new Graph(6, 7, blocks);
