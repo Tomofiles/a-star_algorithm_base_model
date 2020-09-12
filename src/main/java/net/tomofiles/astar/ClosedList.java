@@ -1,14 +1,14 @@
 package net.tomofiles.astar;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Stream;
 
 public class ClosedList {
-    private final List<Node> closedList;
+    private final Set<Node> closedList;
 
     public ClosedList() {
-        this.closedList = new ArrayList<>();
+        this.closedList = new HashSet<>();
     }
 
     public void push(Node node) {

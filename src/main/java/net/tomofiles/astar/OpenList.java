@@ -13,11 +13,8 @@ public class OpenList {
     }
 
     public void push(Node node) {
-        this.openList.add(node);
-    }
-
-    public void remove(Node node) {
         this.openList.removeIf(node::equals);
+        this.openList.add(node);
     }
 
     public Node pull() {
