@@ -9,14 +9,14 @@ public class Graph {
 
     private final List<Node> nodes;
 
-    public Graph(int rows, int cols, List<Block> blocks) {
-        this.nodes = initNodes(rows, cols, blocks);
+    public Graph(Coordinate area, List<Block> blocks) {
+        this.nodes = initNodes(area, blocks);
     }
 
-    private static List<Node> initNodes(int rows, int cols, List<Block> blocks) {
+    private static List<Node> initNodes(Coordinate area, List<Block> blocks) {
         List<Node> nodes = new ArrayList<>();
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
+        for (int row = 0; row < area.getRow(); row++) {
+            for (int col = 0; col < area.getCol(); col++) {
                 Coordinate coordinate = new Coordinate(row, col);
                 if (blocks.stream().anyMatch(block -> block.includes(coordinate))) {
                     nodes.add(new Node(coordinate, Condition.newBlockCondition(DEFAULT_COST)));

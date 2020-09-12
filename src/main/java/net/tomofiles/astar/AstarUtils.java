@@ -21,5 +21,4 @@ public class AstarUtils {
                 + Math.abs(goal.getCol() - each.getCol());
         return new HeuristicCost(heuristic);
     }
-
 }

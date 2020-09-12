@@ -13,7 +13,7 @@ public class AstarTest {
                 new Coordinate(4, 3)
             }))
         });
-        Graph graph = new Graph(6, 7, blocks);
+        Graph graph = new Graph(new Coordinate(6, 7), blocks);
         Coordinate start = new Coordinate(2, 1);
         Coordinate goal = new Coordinate(2, 5);
 
